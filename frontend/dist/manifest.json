@@ -1,0 +1,28 @@
+{
+  "short_name": "TOwheels",
+  "name": "ThaparOnWheelz",
+  "description": "ThaparOnWheelz connects students with verified campus drivers for safe, reliable rides across Thapar University.",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#8c0623",
+  "theme_color": "#8c0623",
+  "display": "standalone",
+  "orientation": "portrait"
+}

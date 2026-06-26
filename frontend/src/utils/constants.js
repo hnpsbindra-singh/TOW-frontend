@@ -1,0 +1,60 @@
+export const LOCATIONS = [
+  'AGIRA_HALL',
+  'AMBARAM_HALL',
+  'AMRITAM_HALL',
+  'ANANTA_HALL',
+  'ANANTAM_HALL',
+  'AUDITORIUM',
+  'C_BLOCK',
+  'C_HALL',
+  'COS_COMPLEX',
+  'CSED',
+  'DHRITI_HALL',
+  'DIRECTORATE',
+  'E_BLOCK',
+  'ELC',
+  'F_BLOCK',
+  'G_BLOCK',
+  'G_BLOCK_CANTEEN',
+  'H_BLOCK',
+  'HEALTH_CENTRE',
+  'HOSTEL_FRF',
+  'HOSTEL_FRG',
+  'IRA_HALL',
+  'KRAVINGS',
+  'LIBRARY',
+  'LT_AND_LP',
+  'MAIN_GATE',
+  'MECHANICAL_DEPARTMENT',
+  'NEERAM_HALL',
+  'OAT',
+  'PRITHVI_HALL',
+  'SBI_BANK',
+  'STREET',
+  'TAN_BUILDING',
+  'TEJAS_HALL',
+  'TSLAS',
+  'VAHNI_HALL',
+  'VASUDHA_HALL_E',
+  'VASUDHA_HALL_G',
+  'VENTURE_LAB',
+  'VIYAT_HALL',
+  'VYAN_HALL',
+  'VYOM_HALL',
+];
+
+export const formatLocation = (loc) =>
+  loc?.replace(/_/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase()) ?? '—';
+
+export const RIDE_STATUS_COLORS = {
+  PENDING: 'badge-warning',
+  ACCEPTED: 'badge-info',
+  COMPLETED: 'badge-success',
+  CANCELLED: 'badge-danger',
+};
+
+export const STATUS_COLORS = {
+  PENDING: 'badge-warning',
+  APPROVED: 'badge-success',
+  REJECTED: 'badge-danger',
+};
