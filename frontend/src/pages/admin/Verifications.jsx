@@ -16,6 +16,17 @@ export default function Verifications() {
       .finally(() => setLoading(false));
   };
 
+  const viewProof = async (userId) => {
+    try {
+      const res = await adminApi.getProofBlob(userId);
+      const file = new Blob([res.data], { type: res.headers['content-type'] });
+      const fileURL = URL.createObjectURL(file);
+      window.open(fileURL, '_blank');
+    } catch (err) {
+      toast.error('Could not load proof document');
+    }
+  };
+
   useEffect(() => { load(); }, []);
 
   const act = async (userId, action) => {
@@ -71,17 +82,17 @@ export default function Verifications() {
                   <div style={{ fontSize: 12, color: 'var(--text-muted)' }}>{u.username} · {u.rollNumber}</div>
                 </div>
 
-                {/* Proof link */}
-                <a
-                  href={adminApi.getProof(u.id)}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                {/* Proof button */}
+                <button
                   className="btn btn-ghost btn-sm"
                   id={`view-proof-${u.id}`}
-                  onClick={(e) => e.stopPropagation()}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    viewProof(u.id);
+                  }}
                 >
                   <ExternalLink size={14} /> View Proof
-                </a>
+                </button>
 
                 {/* Approve */}
                 <button
