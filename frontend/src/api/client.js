@@ -73,6 +73,7 @@ export const adminApi = {
   getUser: (userId) => api.get(`/admin/user/${userId}`),
   getPendingVerifications: () => api.get('/admin/pending-Verifications'),
   getProof: (userId) => `${api.defaults.baseURL}/admin/users/${userId}/proof`,
+  getProofBlob: (userId) => api.get(`/admin/users/${userId}/proof`, { responseType: 'blob' }),
   verifyUser: (userId) => api.patch(`/admin/verify/${userId}`),
   rejectUser: (userId) => api.patch(`/admin/reject/${userId}`),
   makeDriver: (userId) => api.patch(`/admin/make-driver/${userId}`),
