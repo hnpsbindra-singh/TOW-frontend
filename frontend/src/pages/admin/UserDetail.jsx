@@ -18,6 +18,17 @@ export default function UserDetail() {
     }).finally(() => setLoading(false));
   };
 
+  const viewProof = async () => {
+    try {
+      const res = await adminApi.getProofBlob(userId);
+      const file = new Blob([res.data], { type: res.headers['content-type'] });
+      const fileURL = URL.createObjectURL(file);
+      window.open(fileURL, '_blank');
+    } catch (err) {
+      toast.error('Could not load proof document');
+    }
+  };
+
   useEffect(() => { load(); }, [userId]);
 
   const act = async (action) => {
@@ -99,15 +110,13 @@ export default function UserDetail() {
           ))}
 
           {user.proofName && (
-            <a
-              href={adminApi.getProof(userId)}
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={viewProof}
               className="btn btn-outline btn-sm"
               id={`view-proof-${userId}`}
             >
               <ExternalLink size={14} /> View Proof Document
-            </a>
+            </button>
           )}
         </div>
 
