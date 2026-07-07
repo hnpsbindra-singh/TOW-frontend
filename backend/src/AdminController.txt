@@ -1,0 +1,35 @@
+ADMIN CONTROLLER
+
+GET    /api/admin/students [DONE]
+→ View all students.
+
+GET    /api/admin/drivers [DONE]
+→ View all drivers.
+
+GET    /api/admin/users/{userId} [DONE]
+→ View details of a specific user.
+
+GET    /api/admin/pending-verifications [DONE]
+→ View students whose proofs are awaiting review.
+
+GET    /api/admin/proofs/{userId} [DONE]
+→ Download/view a student's uploaded proof.
+
+PATCH  /api/admin/verify/{userId} [DONE]
+→ Approve a student's proof and mark verified=true.
+
+PATCH  /api/admin/reject/{userId} [DONE]
+→ Reject proof and set status accordingly.
+
+PATCH  /api/admin/make-driver/{userId} [DONE]
+→ Promote a student(verified doesn't matter) to DRIVER.
+
+PATCH  /api/admin/make-admin/{userId} [DONE]
+→ Promote a user to ADMIN.
+
+DELETE /api/admin/users/{userId} [DONE]
+→ Delete a student or driver account.
+
+GET    /api/admin/rides [DONE]
+→ View all rides in the system.
+

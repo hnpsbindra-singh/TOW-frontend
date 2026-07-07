@@ -1,0 +1,16 @@
+GET    /api/driver/rides/pending  [DONE]
+→ View all pending ride requests.
+
+GET    /api/driver/rides/{rideId}  [DONE]
+→ View details of a specific ride.
+
+PATCH  /api/driver/rides/{rideId}/accept  [DONE]
+→ Accept a pending ride.
+
+GET    /api/driver/rides/active [DONE]
+→ View all active (accepted) rides assigned to the driver.
+
+GET    /api/driver/rides/completed [DONE]
+→ View completed ride history.
+
+

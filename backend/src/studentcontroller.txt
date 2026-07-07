@@ -1,0 +1,25 @@
+STUDENT CONTROLLER
+
+POST   /student/rides [DONE]
+→ Create a new ride request (e.g., Hostel J → Main Gate).
+
+GET    /student/rides[DONE]
+→ View all rides created by the logged-in student.
+
+GET    /student/rides/{rideId}[DONE]
+→ View details of a specific ride request.
+
+DELETE /student/rides/{rideId} [DONE]
+→ Cancel a ride request if it has not been completed.
+
+GET    /student/rides/{rideId}/driver [DONE]
+→ View the driver who accepted the ride.
+
+POST   /student/rides/{rideId}/complete [DONE]
+→ Mark the ride as completed from the student's side.
+
+GET    /student/history [DONE]
+→ View previously completed rides.
+
+GET    /student/active-ride
+→ View the currently active ride (if any).
